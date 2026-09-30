@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Midas · Paid Acquisition Snapshot</title>
+<style>
+  :root{
+    --bg:#0A0D10; --panel:#11161B; --panel2:#151B21; --line:#232B33; --line2:#2d3742;
+    --ink:#EAF0F6; --mut:#8C99A6; --soft:#C6D0DA;
+    --gold:#E7B24C; --red:#EC6672; --green:#4FC06E; --blue:#5AA7F0;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:radial-gradient(1100px 520px at 82% -12%,#16212b 0%,var(--bg) 55%);color:var(--ink);font-family:var(--sans);line-height:1.58;-webkit-font-smoothing:antialiased;padding:34px 20px 54px}
+  .wrap{max-width:860px;margin:0 auto}
+
+  .kick{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--gold);text-transform:uppercase}
+  h1{font-size:26px;line-height:1.2;margin:9px 0 8px;font-weight:700;letter-spacing:-.015em}
+  .lede{color:var(--soft);font-size:14.5px;max-width:640px}
+  .obs{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:11px;color:var(--mut);border:1px solid var(--line);border-radius:20px;padding:4px 11px}
+
+  .rule{height:1px;background:linear-gradient(90deg,transparent,var(--line2),transparent);margin:26px 0}
+
+  h2{font-size:12px;font-family:var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--mut);margin:0 0 13px;font-weight:600}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:15px 16px}
+  .card .h{display:flex;align-items:center;gap:9px;font-weight:650;font-size:14px}
+  .card p{margin:7px 0 0;color:var(--soft);font-size:12.8px}
+  .ok{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(79,192,110,.14)}
+
+  .find{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:4px 2px;margin-top:2px}
+  .f{display:flex;gap:13px;padding:14px 16px;border-bottom:1px solid var(--line)}
+  .f:last-child{border-bottom:none}
+  .mk{flex:none;width:8px;height:8px;border-radius:2px;margin-top:6px;background:var(--red)}
+  .mk.amber{background:var(--gold)}
+  .f .ft{font-weight:640;font-size:13.6px}
+  .f .fd{color:var(--soft);font-size:12.7px;margin-top:3px}
+
+  .note{margin-top:14px;background:linear-gradient(180deg,#121820,#0f141a);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:13px 16px;color:var(--soft);font-size:13px}
+  .note b{color:var(--ink);font-weight:650}
+
+  .fix{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line)}
+  .fix:last-child{border-bottom:none}
+  .fnum{font-family:var(--mono);font-size:12px;color:var(--green);flex:none;margin-top:1px}
+  .fix div{font-size:13.4px;color:var(--soft)}
+
+  .aud{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+  .aud .a{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
+  .aud .al{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--gold);text-transform:uppercase}
+  .aud .av{font-size:13px;margin-top:5px;color:var(--soft)}
+  .tl{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+  .wk{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 12px;position:relative}
+  .wk:before{content:"";position:absolute;left:14px;right:14px;top:0;height:2px;background:var(--blue);opacity:.55;border-radius:2px}
+  .wk .wl{font-family:var(--mono);font-size:10.5px;color:var(--blue);margin-top:4px}
+  .wk .wt{font-size:12.2px;color:var(--soft);margin-top:5px}
+
+  .close{margin-top:24px;background:linear-gradient(180deg,#141b16,#101510);border:1px solid #294032;border-radius:14px;padding:18px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .close .ct{font-size:15.5px;font-weight:650;flex:1;min-width:260px}
+  .close .cta{font-family:var(--mono);font-size:12px;color:#0A0D10;background:var(--gold);padding:10px 15px;border-radius:9px;font-weight:700;letter-spacing:.02em}
+
+  .foot{margin-top:24px;color:var(--mut);font-size:11px;font-family:var(--mono);text-align:center;line-height:1.7}
+
+  @media(max-width:620px){
+    .two,.aud{grid-template-columns:1fr}
+    .tl{grid-template-columns:1fr 1fr}
+    h1{font-size:22px}
+    body{padding:26px 15px 44px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="kick">Paid Acquisition Snapshot</div>
+  <h1>Getting Midas sign-ups and demos ready to advertise</h1>
+  <div class="lede">A quick outside-in read of what is in place today, what is missing before paid can work, and how a first 30-day test would run.</div>
+  <div class="obs">Based only on what is publicly observable from the outside</div>
+
+  <div class="rule"></div>
+
+  <h2>What is already in place</h2>
+  <div class="two">
+    <div class="card">
+      <div class="h"><span class="ok"></span> Web analytics on the site</div>
+      <p>GA4 is live on the marketing site, so there is a real analytics foundation to build on.</p>
+    </div>
+    <div class="card">
+      <div class="h"><span class="ok"></span> Product analytics in the app</div>
+      <p>The app runs PostHog, so in-product behaviour is being captured. A good starting point.</p>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+
+  <h2>What is missing before paid can work</h2>
+  <div class="find">
+    <div class="f">
+      <span class="mk"></span>
+      <div>
+        <div class="ft">The site and the app do not join up</div>
+        <div class="fd">GA4 stops at the marketing site. The sign-up app (app.getmidas.ai) has product analytics but no GA4 and no ad tracking, so a completed sign-up never reaches Google or Meta.</div>
+      </div>
+    </div>
+    <div class="f">
+      <span class="mk"></span>
+      <div>
+        <div class="ft">Demo bookings are not measurable</div>
+        <div class="fd">The demo button sends people to an off-site Google Calendar link, so a booked demo is not captured as a conversion today.</div>
+      </div>
+    </div>
+    <div class="f">
+      <span class="mk"></span>
+      <div>
+        <div class="ft">No conversion signal or audience for ads</div>
+        <div class="fd">There is no Google Ads tag and no Meta pixel on the site, and GA4 sits behind cookie consent. So there is nothing yet to optimise toward and no retargeting audience for either platform.</div>
+      </div>
+    </div>
+    <div class="f">
+      <span class="mk amber"></span>
+      <div>
+        <div class="ft">Nothing is running yet, which is an advantage</div>
+        <div class="fd">No live Google ads appear in Google's public Ads Transparency Center, and no Meta ads presence was found. A clean start means no wasted spend to unwind, and no bad data to clean up.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>Market context:</b> the category is already being bid on by incumbents such as FactSet and Bloomberg. That is exactly why a precise, tracking-first entry matters: it keeps cost per sign-up and per demo honest from day one instead of burning budget to learn what could have been measured up front.
+  </div>
+
+  <div class="rule"></div>
+
+  <h2>Why this is the real issue</h2>
+  <div class="note" style="border-left-color:var(--blue)">
+    Until a sign-up and a demo can be measured end to end, no paid channel can be judged or scaled with confidence. The tracking has to come before the spend, not after. That is the core gap here, and it is quick to close.
+  </div>
+
+  <div class="rule"></div>
+
+  <h2>How it gets fixed</h2>
+  <div class="fix"><span class="fnum">01</span><div>One measurement layer across the site and the app, so a sign-up and a demo are both counted, wherever they happen.</div></div>
+  <div class="fix"><span class="fnum">02</span><div>Google and Meta conversion tracking built correctly, server-side where it counts, so the numbers hold up.</div></div>
+  <div class="fix"><span class="fnum">03</span><div>Audiences switched on: site visitors, sign-ups, look-alikes, and interest, ready for retargeting and prospecting.</div></div>
+
+  <div class="rule"></div>
+
+  <h2>The first 30-day test, at a glance</h2>
+  <div class="aud">
+    <div class="a"><div class="al">Audience A</div><div class="av">Individual investors, through the self-serve sign-up.</div></div>
+    <div class="a"><div class="al">Audience B</div><div class="av">Funds and analysts, through the demo booking.</div></div>
+  </div>
+  <div class="tl">
+    <div class="wk"><div class="wl">WEEK 1</div><div class="wt">Tracking and accounts built, audiences set up.</div></div>
+    <div class="wk"><div class="wl">WEEK 2</div><div class="wt">First campaigns live across both audiences.</div></div>
+    <div class="wk"><div class="wl">WEEK 3</div><div class="wt">Read the signals, cut waste, back the winners.</div></div>
+    <div class="wk"><div class="wl">WEEK 4</div><div class="wt">Results read-out and a clean handover.</div></div>
+  </div>
+
+  <div class="close">
+    <div class="ct">Off these initial observations, a complete audit, Google, Meta and tracking, can be in your hands within 24 to 48 hours.</div>
+    <div class="cta">FULL AUDIT · 24 TO 48H</div>
+  </div>
+
+  <div class="foot">
+    Prepared for Midas &middot; October 2026<br>
+    External observation only. A full audit with account access confirms the detail.
+  </div>
+
+</div>
+</body>
+</html>
